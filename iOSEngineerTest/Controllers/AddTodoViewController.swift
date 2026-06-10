@@ -23,13 +23,6 @@ final class AddTodoViewController: UIViewController {
         contentTextView.layer.borderColor = UIColor.separator.cgColor
         contentTextView.textContainerInset = UIEdgeInsets(top: 8, left: 4, bottom: 8, right: 4)
         titleField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
-        
-        if prioritySegmentedControl.numberOfSegments == 0 {
-            prioritySegmentedControl.insertSegment(withTitle: "High", at: 0, animated: false)
-            prioritySegmentedControl.insertSegment(withTitle: "Medium", at: 1, animated: false)
-            prioritySegmentedControl.insertSegment(withTitle: "Low", at: 2, animated: false)
-            prioritySegmentedControl.selectedSegmentIndex = 1
-        }
     }
 
     @objc private func textChanged() {

@@ -106,7 +106,7 @@ extension TodoListViewController: UITableViewDelegate {
 
 extension TodoListViewController: AddTodoViewControllerDelegate {
     func addTodoViewController(_ vc: AddTodoViewController, didSave todo: Todo) {
-        TodoStorage.append(todo)
+        TodoStorage.save(todo)
         vc.dismiss(animated: true) { [weak self] in
             self?.reload()
         }

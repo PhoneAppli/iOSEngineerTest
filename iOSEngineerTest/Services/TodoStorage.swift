@@ -13,7 +13,7 @@ enum TodoStorage {
         UserDefaults.standard.set(data, forKey: key)
     }
 
-    static func append(_ todo: Todo) {
+    static func save(_ todo: Todo) {
         var todos = loadAll()
         todos.append(todo)
         saveAll(todos)

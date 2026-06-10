@@ -5,17 +5,6 @@ struct Todo: Codable, Hashable, Identifiable {
         case high
         case medium
         case low
-
-        var badgeURL: URL {
-            switch self {
-            case .high:
-                return URL(string: "https://img.shields.io/badge/review-high-red.png")!
-            case .medium:
-                return URL(string: "https://img.shields.io/badge/review-medium-green.png")!
-            case .low:
-                return URL(string: "https://img.shields.io/badge/review-low-blue.png")!
-            }
-        }
     }
 
     let id: UUID
