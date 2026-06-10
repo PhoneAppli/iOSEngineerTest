@@ -9,7 +9,7 @@ struct Todo: Codable, Hashable, Identifiable {
         var badgeURL: URL {
             switch self {
             case .high:
-                return URL(string: "https://img.shields.io/badge/review-hight-red.png")!
+                return URL(string: "https://img.shields.io/badge/review-high-red.png")!
             case .medium:
                 return URL(string: "https://img.shields.io/badge/review-medium-green.png")!
             case .low:
