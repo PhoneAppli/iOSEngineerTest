@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nVC-ma-in1">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="nVC-sc-001">
+            <objects>
+                <navigationController id="nVC-ma-in1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nNB-ma-in1">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tLV-ma-in1" kind="relationship" relationship="rootViewController" id="rNC-ma-001"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVC-fp-001" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-547" y="160"/>
+        </scene>
+        <!--TODO-->
+        <scene sceneID="tLV-sc-001">
+            <objects>
+                <viewController id="tLV-ma-in1" customClass="TodoListViewController" customModule="iOSEngineerTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tLV-vi-ew1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tBV-ma-in1">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoCell" id="cEL-ma-in1" customClass="TodoCell" customModule="iOSEngineerTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50.333333969116211" width="393" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cEL-ma-in1" id="cEL-cv-iw1">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cEL-sk-v01">
+                                                    <rect key="frame" x="16" y="8" width="361" height="108"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEL-tl-b01">
+                                                            <rect key="frame" x="0.0" y="0.0" width="361" height="50"/>
+                                                            <fontDescription key="fontDescription" pointSize="0.0"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Deadline" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEL-dl-b01">
+                                                            <rect key="frame" x="0.0" y="54" width="361" height="54"/>
+                                                            <fontDescription key="fontDescription" pointSize="0.0"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="cEL-iv-b01">
+                                                    <rect key="frame" x="16" y="52" width="90" height="20"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="cEL-sk-v01" secondAttribute="bottom" constant="8" id="cEL-c-b01"/>
+                                                <constraint firstItem="cEL-sk-v01" firstAttribute="leading" secondItem="cEL-cv-iw1" secondAttribute="leading" constant="114" id="cEL-c-l01"/>
+                                                <constraint firstAttribute="trailing" secondItem="cEL-sk-v01" secondAttribute="trailing" constant="16" id="cEL-c-r01"/>
+                                                <constraint firstItem="cEL-sk-v01" firstAttribute="top" secondItem="cEL-cv-iw1" secondAttribute="top" constant="8" id="cEL-c-t01"/>
+                                                <constraint firstItem="cEL-iv-b01" firstAttribute="leading" secondItem="cEL-cv-iw1" secondAttribute="leading" constant="16" id="cEL-c-il1"/>
+                                                <constraint firstItem="cEL-iv-b01" firstAttribute="centerY" secondItem="cEL-cv-iw1" secondAttribute="centerY" id="cEL-c-icy"/>
+                                                <constraint firstItem="cEL-iv-b01" firstAttribute="width" constant="90" id="cEL-c-iw1"/>
+                                                <constraint firstItem="cEL-iv-b01" firstAttribute="height" constant="20" id="cEL-c-ih1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="badgeImageView" destination="cEL-iv-b01" id="out-biv-c01"/>
+                                            <outlet property="deadlineLabel" destination="cEL-dl-b01" id="out-cdl-c01"/>
+                                            <outlet property="titleLabel" destination="cEL-tl-b01" id="out-ctl-c01"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="tLV-ma-in1" id="out-tbl-del"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tLV-sa-fe1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tBV-ma-in1" secondAttribute="bottom" id="tLV-c-b01"/>
+                            <constraint firstItem="tBV-ma-in1" firstAttribute="leading" secondItem="tLV-vi-ew1" secondAttribute="leading" id="tLV-c-l01"/>
+                            <constraint firstAttribute="trailing" secondItem="tBV-ma-in1" secondAttribute="trailing" id="tLV-c-r01"/>
+                            <constraint firstItem="tBV-ma-in1" firstAttribute="top" secondItem="tLV-vi-ew1" secondAttribute="top" id="tLV-c-t01"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TODO" id="tLV-ni-001"/>
+                    <connections>
+                        <outlet property="tableView" destination="tBV-ma-in1" id="out-tbl-v01"/>
+                        <segue destination="dTV-ma-in1" kind="show" identifier="showDetail" id="seg-det-sho1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLV-fp-001" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="160"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aNV-sc-001">
+            <objects>
+                <navigationController storyboardIdentifier="AddTodoNavigation" id="aNV-ma-in1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aNV-nb-r01">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aTV-ma-in1" kind="relationship" relationship="rootViewController" id="rNC-ma-002"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aNV-fp-001" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192" y="898"/>
+        </scene>
+        <!--新規TODO-->
+        <scene sceneID="aTV-sc-001">
+            <objects>
+                <viewController id="aTV-ma-in1" customClass="AddTodoViewController" customModule="iOSEngineerTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aTV-vi-ew1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aSV-ma-in1">
+                                <rect key="frame" x="16" y="196" width="361" height="208"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="見出し" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTF-ma-in1">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCT-ma-in1">
+                                        <rect key="frame" x="0.0" y="46" width="361" height="100"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="aTV-h-001"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <datePicker opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="aDP-ma-in1">
+                                        <rect key="frame" x="0.0" y="158" width="361" height="50"/>
+                                    </datePicker>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="aPSC-ma-in1">
+                                        <rect key="frame" x="0.0" y="220" width="361" height="32"/>
+                                        <segments>
+                                            <segment title="High"/>
+                                            <segment title="Medium"/>
+                                            <segment title="Low"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aTV-sa-fe1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aSV-ma-in1" firstAttribute="leading" secondItem="aTV-vi-ew1" secondAttribute="leading" constant="16" id="aTV-c-l01"/>
+                            <constraint firstAttribute="trailing" secondItem="aSV-ma-in1" secondAttribute="trailing" constant="16" id="aTV-c-r01"/>
+                            <constraint firstItem="aSV-ma-in1" firstAttribute="top" secondItem="aTV-sa-fe1" secondAttribute="top" constant="24" id="aTV-c-t01"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="新規TODO" id="aTV-ni-t01">
+                        <barButtonItem key="leftBarButtonItem" title="キャンセル" style="plain" id="aTV-cb-n01">
+                            <connections>
+                                <action selector="didTapCancel:" destination="aTV-ma-in1" id="act-del-cnl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="登録" style="done" id="aTV-sb-n01">
+                            <connections>
+                                <action selector="didTapSave:" destination="aTV-ma-in1" id="act-del-sav"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentTextView" destination="aCT-ma-in1" id="out-ctv-v01"/>
+                        <outlet property="deadlinePicker" destination="aDP-ma-in1" id="out-dpk-v01"/>
+                        <outlet property="prioritySegmentedControl" destination="aPSC-ma-in1" id="out-psc-v01"/>
+                        <outlet property="saveButton" destination="aTV-sb-n01" id="out-svb-v01"/>
+                        <outlet property="titleField" destination="aTF-ma-in1" id="out-ttf-v01"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTV-fp-001" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="898"/>
+        </scene>
+        <!--詳細-->
+        <scene sceneID="dTV-sc-001">
+            <objects>
+                <viewController id="dTV-ma-in1" customClass="TodoDetailViewController" customModule="iOSEngineerTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dTV-vi-ew1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dSV-ma-in1">
+                                <rect key="frame" x="16" y="196" width="361" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTV-tl-b01">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="0.0"/>
+                                        <fontDescription key="fontDescription" pointSize="0.0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTV-cl-b01">
+                                        <rect key="frame" x="0.0" y="16" width="361" height="0.0"/>
+                                        <fontDescription key="fontDescription" pointSize="0.0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTV-dl-b01">
+                                        <rect key="frame" x="0.0" y="32" width="361" height="50"/>
+                                        <fontDescription key="fontDescription" pointSize="0.0"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dTV-sa-fe1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dSV-ma-in1" firstAttribute="leading" secondItem="dTV-vi-ew1" secondAttribute="leading" constant="16" id="dTV-c-l01"/>
+                            <constraint firstAttribute="trailing" secondItem="dSV-ma-in1" secondAttribute="trailing" constant="16" id="dTV-c-r01"/>
+                            <constraint firstItem="dSV-ma-in1" firstAttribute="top" secondItem="dTV-sa-fe1" secondAttribute="top" constant="24" id="dTV-c-t01"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="詳細" id="dTV-ni-t01"/>
+                    <connections>
+                        <outlet property="contentLabel" destination="dTV-cl-b01" id="out-dcl-v01"/>
+                        <outlet property="deadlineLabel" destination="dTV-dl-b01" id="out-ddl-v01"/>
+                        <outlet property="titleLabel" destination="dTV-tl-b01" id="out-dtl-v01"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTV-fp-001" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920" y="160"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
